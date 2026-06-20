@@ -1,11 +1,13 @@
 import type * as THREE from "three";
-
 export type MediaItem = {
   url: string;
   width: number;
   height: number;
+  slug?: string;
+  title?: string;
+  id?: string;
+  type?: string;
 };
-
 export type InfiniteCanvasProps = {
   media: MediaItem[];
   onTextureProgress?: (progress: number) => void;
@@ -19,14 +21,12 @@ export type InfiniteCanvasProps = {
   backgroundColor?: string;
   fogColor?: string;
 };
-
 export type ChunkData = {
   key: string;
   cx: number;
   cy: number;
   cz: number;
 };
-
 export type PlaneData = {
   id: string;
   position: THREE.Vector3;
