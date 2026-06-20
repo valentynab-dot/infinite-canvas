@@ -178,7 +178,7 @@ function MediaPlane({
       visible={false}
       geometry={PLANE_GEOMETRY}
       onClick={() => {
-        window.parent.postMessage({ type: 'PROJECT_CLICK', slug: media.slug }, '*');
+        window.parent.postMessage({ type: 'PROJECT_CLICK', slug: media.title }, '*');
       }}
     >
       <meshBasicMaterial ref={materialRef} transparent opacity={0} side={THREE.DoubleSide} />
